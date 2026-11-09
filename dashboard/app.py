@@ -101,7 +101,16 @@ def create_handler(output_dir: Path, password: str, auditor_password: str | None
         def do_POST(self):
             route = urlsplit(self.path).path
             if not self._origin_ok():
-                self._send(layout('<div class="warn danger">Origin mismatch</div>'),403);return
+                request_origin = self.headers.get('Origin', '(missing)')
+                expected_origin = f'http://127.0.0.1:{self.server.server_port}'
+                print(f'[LOCAL DEBUG] Rejected POST Origin: {request_origin!r}; expected {expected_origin!r} or localhost equivalent', flush=True)
+                self._send(layout(
+                    '<div class="warn danger"><strong>Origin mismatch</strong>'
+                    '<p>Request origin: <code>' + e(request_origin) + '</code></p>'
+                    '<p>Expected origin: <code>' + e(expected_origin) + '</code> or localhost equivalent.</p>'
+                    '<p>This request was blocked. No password was checked. Please check browser URL or extensions.</p>'
+                    '</div>'), 403)
+                return
             try: form=self._form()
             except (ReviewError,ValueError,UnicodeDecodeError) as ex:
                 self._send(layout(f'<p>{e(ex)}</p>'),400);return
