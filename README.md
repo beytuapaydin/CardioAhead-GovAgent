@@ -4,6 +4,13 @@
 
 > **Capability does not grant authority.** The optional LLM extracts *draft notes*, while an independent deterministic Python gate decides whether an item can proceed to routine documentation or must enter human review. No clinical, regulatory, or external system changes are ever executed.
 
+
+## Engineering case study and verification
+
+- [AI Safety Engineering Case Study (v0.4)](docs/CASE_STUDY.md) — architecture, authority boundaries, threat model, tested controls, and limitations.
+- [Automated test workflow](.github/workflows/tests.yml) — executes the standard-library unittest suite on Python 3.10 and 3.12.
+- **Development disclosure:** This prototype was implemented largely with AI coding assistance; the owner is reviewing, testing, and developing independent engineering ownership. It is not a clinically validated device or a regulatory compliance claim.
+
 ## Architecture
 
 ```text
