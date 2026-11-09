@@ -5,6 +5,12 @@
 
 > **Capability does not grant authority.** An AI can suggest or describe an action; it cannot authorize itself to execute it.
 
+## Watch the actual engineering demo
+
+**[▶ Watch the 55-second technical demonstration](docs/demo/CardioAhead_GovAgent_Actual_Engineering_Demo.mp4)** · [Download MP4](https://raw.githubusercontent.com/beytuapaydin/CardioAhead-GovAgent/main/docs/demo/CardioAhead_GovAgent_Actual_Engineering_Demo.mp4)
+
+The screen-recorded demo shows synthetic incident triage, an independent Authority Gate denying the INC-003 sandbox action, the local Human Review Dashboard, and GitHub Actions test results. **Mock mode only:** no live LLM call, clinical action, or external system execution is demonstrated.
+
 ## Why this project?
 
 AI-generated risk assessments can be useful, but a persuasive recommendation is not an authorization decision. This prototype explores a practical engineering question: **Can independent controls prevent agent outputs from turning into unauthorized actions, even when a human reviews the case?**
