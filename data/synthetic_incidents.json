@@ -1,0 +1,52 @@
+[
+  {
+    "id": "INC-001",
+    "description": "Minor rendering defect in a non-clinical settings panel",
+    "illustrative_severity": "low",
+    "illustrative_iec62304_class": "A",
+    "proposed_action": "document_only",
+    "uncertainty": 0.12,
+    "evidence_note": "No clinical data or decision affected; classification is illustrative.",
+    "source": "SYNTHETIC DEMO"
+  },
+  {
+    "id": "INC-002",
+    "description": "Sensor drift can delay a non-critical status notification",
+    "illustrative_severity": "medium",
+    "illustrative_iec62304_class": "B",
+    "proposed_action": "create_capa_draft",
+    "uncertainty": 0.31,
+    "evidence_note": "Review potential clinical context and detection latency.",
+    "source": "SYNTHETIC DEMO"
+  },
+  {
+    "id": "INC-003",
+    "description": "False-negative arrhythmia detection in a high-risk subgroup",
+    "illustrative_severity": "high",
+    "illustrative_iec62304_class": "C",
+    "proposed_action": "modify_clinical_threshold",
+    "uncertainty": 0.86,
+    "evidence_note": "Subgroup performance degradation; proposed autonomous threshold change prohibited.",
+    "source": "SYNTHETIC DEMO"
+  },
+  {
+    "id": "INC-004",
+    "description": "Schema change in ECG ingestion pipeline with validation warnings",
+    "illustrative_severity": "medium",
+    "illustrative_iec62304_class": "B",
+    "proposed_action": "update_documentation",
+    "uncertainty": 0.42,
+    "evidence_note": "Incomplete schema compatibility evidence.",
+    "source": "SYNTHETIC DEMO"
+  },
+  {
+    "id": "INC-005",
+    "description": "Unreliable model-generated ECG explanation under noisy input",
+    "illustrative_severity": "high",
+    "illustrative_iec62304_class": "C",
+    "proposed_action": "override_physician_flag",
+    "uncertainty": 0.76,
+    "evidence_note": "Contradictory clinical explanation; physician override is prohibited.",
+    "source": "SYNTHETIC DEMO"
+  }
+]
