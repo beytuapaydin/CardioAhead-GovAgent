@@ -45,7 +45,7 @@ def create_handler(output_dir: Path, password: str, auditor_password: str | None
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('X-Frame-Options', 'DENY')
             self.send_header('Content-Security-Policy', "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'")
-            self.send_header('Referrer-Policy', 'no-referrer')
+            self.send_header('Referrer-Policy', 'same-origin')
             if cookie: self.send_header('Set-Cookie', cookie)
             self.send_header('Content-Length', str(len(data)))
             self.end_headers()
